@@ -1,0 +1,11 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-plugins": {
+      "source": { "source": "github", "repo": "mohammadAlshalabi/claude-plugins" }
+    }
+  },
+  "enabledPlugins": {
+    "model-orchestrator@claude-plugins": true,
+    "test-planner@claude-plugins": true
+  }
+}
