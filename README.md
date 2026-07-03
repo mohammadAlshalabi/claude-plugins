@@ -7,6 +7,7 @@ A Claude Code plugin marketplace for team skills/agents.
 ```
 /plugin marketplace add mohammadAlshalabi/claude-plugins
 /plugin install model-orchestrator
+/plugin install test-planner
 ```
 
 Update later with:
@@ -27,3 +28,21 @@ large multi-step tasks.
 - Skill `orchestrate` — the workflow logic (decompose → tier → dispatch → review)
 - Subagents `implementer-sonnet` / `implementer-haiku` — pre-scoped execution
   roles the skill dispatches to
+
+### test-planner
+
+Drafts a structured test plan grounded in the actual code plus a short
+interactive Q&A (scope boundaries, risk priorities, audience), then publishes
+it to **Google Docs** if the Google Drive connector is enabled — otherwise
+writes a local Markdown file with import instructions, so it works on every
+surface.
+
+- `/test-plan <feature>` — draft and publish a test plan
+- Skill `test-plan` — gather (code + user) → draft → publish/fallback
+- `skills/test-plan/references/template.md` — the section structure
+  (IEEE 829-aligned, Agile-weighted); self-contained so it's portable to
+  Claude Desktop/web too
+
+> Note: native Google Docs creation only works where the Google Drive connector
+> is enabled. Without it the skill falls back to a local Markdown file you can
+> import into Docs — it's never a dead end.

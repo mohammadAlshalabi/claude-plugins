@@ -43,3 +43,15 @@ reviews the actual diff/output before accepting.
 - `skills/orchestrate/SKILL.md` — decompose → tier → dispatch → review logic
 - `agents/implementer-sonnet.md`, `agents/implementer-haiku.md` — pinned-model
   execution subagents the skill dispatches to
+
+### test-planner
+
+Drafts a structured test plan grounded in the code + a short interactive Q&A,
+then publishes to Google Docs if the Google Drive connector is available, else
+falls back to a local Markdown file.
+
+- `/test-plan <feature>` — entry point
+- `skills/test-plan/SKILL.md` — gather (code inspection + user gaps) → draft →
+  publish (detect `*Google_Drive__create_file`, else local `.md` + import steps)
+- `skills/test-plan/references/template.md` — section structure (IEEE 829-aligned,
+  Agile-weighted). Keep self-contained so the skill stays portable to Desktop/web.

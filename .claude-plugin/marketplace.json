@@ -10,6 +10,12 @@
       "source": "./model-orchestrator",
       "description": "Opus plans and reviews; cheaper models (Sonnet/Haiku) do the execution work.",
       "version": "0.1.0"
+    },
+    {
+      "name": "test-planner",
+      "source": "./test-planner",
+      "description": "Draft a structured test plan (grounded in the code + your input) and publish it to Google Docs, or fall back to a local Markdown file.",
+      "version": "0.1.0"
     }
   ]
 }

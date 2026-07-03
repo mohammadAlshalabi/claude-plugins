@@ -1,0 +1,9 @@
+{
+  "name": "test-planner",
+  "version": "0.1.0",
+  "description": "Draft a structured test plan (grounded in the code + your input) and publish it to Google Docs, or fall back to a local Markdown file.",
+  "author": {
+    "name": "Mohammad Alshalabi",
+    "email": "m.alshalabi96@gmail.com"
+  }
+}
