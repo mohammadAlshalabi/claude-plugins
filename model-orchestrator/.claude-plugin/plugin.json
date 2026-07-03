@@ -1,0 +1,9 @@
+{
+  "name": "model-orchestrator",
+  "version": "0.1.0",
+  "description": "Opus plans and reviews; cheaper models (Sonnet/Haiku) do the execution work.",
+  "author": {
+    "name": "Mohammad Alshalabi",
+    "email": "m.alshalabi96@gmail.com"
+  }
+}
