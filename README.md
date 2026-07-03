@@ -6,9 +6,14 @@ A Claude Code plugin marketplace for team skills/agents.
 
 ```
 /plugin marketplace add mohammadAlshalabi/claude-plugins
-/plugin install model-orchestrator
-/plugin install test-planner
+/plugin install model-orchestrator@shalabi-plugins
+/plugin install test-planner@shalabi-plugins
 ```
+
+> The GitHub repo is `claude-plugins`, but the marketplace's internal **name is
+> `shalabi-plugins`** (Claude Code rejects marketplace names that look like
+> official Anthropic ones). That's why plugin IDs use the `@shalabi-plugins`
+> suffix.
 
 Update later with:
 
