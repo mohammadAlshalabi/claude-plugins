@@ -33,8 +33,11 @@ infer.
      revenue? data loss?), so the risk register is ranked meaningfully.
    - **Depth / audience** — quick sprint checklist vs. formal sign-off doc; who
      reads it (just the team, or stakeholders/QA/compliance).
-   - Owners / dates only if they want the schedule and responsibilities sections
-     filled rather than left as placeholders.
+   - **Owners, dates, and other sign-off fields** — for any section the chosen
+     depth will include (responsibilities, schedule, sign-off) that the source
+     material doesn't already supply, **ask the user for the values** rather
+     than planning to drop `<TBD>` into the doc. Batch these with the other
+     questions. See "No silent placeholders" in Phase 2.
 
    If the user gave a thorough description up front, don't re-ask what they
    already answered.
@@ -50,9 +53,23 @@ Ground every section in specifics:
   edge cases you saw in the code, each with clear expected results.
 - **Risk register** ranked by the user's stated priorities, with likelihood ×
   impact and a real mitigation per row.
-- Leave a clearly-marked `<placeholder>` only where information genuinely isn't
-  available yet (e.g. an owner the user didn't name) — don't fabricate names,
-  dates, or coverage numbers.
+
+### No silent placeholders
+
+Do **not** publish a document full of `<TBD>` for values a human can just tell
+you. For every field a section needs but the source doesn't provide — owners,
+reviewers, target dates, environments, tooling, sign-off names — **ask the
+user for it** during the gather phase (batched, not one at a time).
+
+- Only after asking may a value stay unresolved, and only if the user says they
+  don't have it yet. In that case use a clearly-marked placeholder like
+  `<owner: TBD>` **and** call out in your summary exactly which placeholders
+  remain and why, so nothing unfilled slips into a sign-off doc unnoticed.
+- Never *fabricate* names, dates, or coverage numbers to avoid a placeholder —
+  ask, or mark it explicitly. Guessing is worse than an honest gap.
+- If the user chose a lean/checklist depth that omits the responsibilities,
+  schedule, and sign-off sections entirely, there's nothing to ask about there —
+  don't manufacture questions for sections you're not including.
 
 Show the draft (or a tight summary of it) to the user before publishing, so
 they can correct scope/risks. This is cheaper than fixing it in the Doc.
